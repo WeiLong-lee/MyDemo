@@ -1,5 +1,7 @@
 package com.example.io.bio;
 
+import com.example.utils.CalculatorUtil;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -30,14 +32,15 @@ public class ServerHandler implements Runnable {
                 if ((expression = in.readLine()) == null) break;
                 System.out.println("服务器收到消息：" + expression);
                 try {
+
                     result = Calculator.cal(expression).toString();
                 } catch (Exception e) {
                     result = "计算错误：" + e.getMessage();
                 }
+                out.println(result);
             }
-
         }catch (Exception e){
-
+            e.printStackTrace();
         }finally {
                 //一些必要的清理工作
                 if(in != null){
