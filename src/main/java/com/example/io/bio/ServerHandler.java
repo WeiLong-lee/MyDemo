@@ -1,6 +1,5 @@
 package com.example.io.bio;
 
-import com.example.utils.CalculatorUtil;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -33,7 +32,7 @@ public class ServerHandler implements Runnable {
                 System.out.println("服务器收到消息：" + expression);
                 try {
 
-                    result = Calculator.cal(expression).toString();
+                    result = null; //Calculator.cal(expression).toString();
                 } catch (Exception e) {
                     result = "计算错误：" + e.getMessage();
                 }
