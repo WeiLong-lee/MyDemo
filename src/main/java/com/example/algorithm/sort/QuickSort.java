@@ -10,18 +10,12 @@ public class QuickSort {
 
 
     public static void main(String[] args) {
-        List list =  new ArrayList();
-        for(int i =0;i< 10;i ++){
-            list.add(new Random().nextInt(1000));
-        }
-        System.out.println(list);
-
         int[] quickArray = new int[20];
         for(int i =0;i< 20;i++){
             quickArray[i] = new Random().nextInt(1000);
         }
         System.out.println(Arrays.toString(quickArray));
-        QuickSort(quickArray,0,list.size()-1);
+        QuickSort(quickArray,0,quickArray.length -1);
         System.out.println(Arrays.toString(quickArray));
 
     }
