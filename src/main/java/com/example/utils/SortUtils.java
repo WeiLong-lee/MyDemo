@@ -2,6 +2,7 @@ package com.example.utils;
 
 import java.util.Arrays;
 import java.util.Objects;
+import java.util.regex.Pattern;
 
 /**
  * Created by LiWeilong on 2018/6/5.
@@ -25,5 +26,16 @@ public class SortUtils {
             return true;
         }
         return false;
+    }
+
+    public static boolean isInteger(String str){
+        Pattern pattern = Pattern.compile("^[-\\+]?[\\d]*$");
+        return pattern.matcher(str).matches();
+    }
+
+    public static void main(String[] args) {
+        System.out.println("结果："+isInteger("d"));
+
+        System.out.println(!"3".equals(null));
     }
 }

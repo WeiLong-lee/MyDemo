@@ -1,6 +1,5 @@
 package com.example.concurrent;
 
-import java.util.HashMap;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -8,6 +7,12 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class ConcurrentHashMapTest {
 
-    ConcurrentHashMap concurrentHashMap = new  ConcurrentHashMap();
+    public static void main(String[] args) {
+        ConcurrentHashMap conHashMap = new  ConcurrentHashMap();
+        conHashMap.put("a",1000);
+
+        Integer value = (Integer) conHashMap.get("a");
+        System.out.println(value);
+    }
 
 }

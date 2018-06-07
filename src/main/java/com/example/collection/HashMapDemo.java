@@ -6,6 +6,7 @@ import com.example.algorithm.sort.HeapSort;
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * Created by LiWeilong on 2018/5/31.
@@ -15,15 +16,18 @@ public class HashMapDemo {
 
 
     public static void main(String[] args) {
-        Map<String,Integer> treeMap = new TreeMap<>();
-        treeMap.put("a",10);
-        treeMap.put("b",20);
-        treeMap.put("c",5);
-        treeMap.put("d",7);
-        treeMap.put("e",9);
-        treeMap.put("f",30);
-        getTopTen(treeMap);
-        getTopKHeap(treeMap);
+        Map<String,Integer> hashMap = new HashMap<>();
+        hashMap.put("a",10);
+        hashMap.put("b",20);
+        hashMap.put("b",200);
+        hashMap.put("b",201);
+        hashMap.put("c",5);
+        hashMap.put("d",7);
+        hashMap.put("e",9);
+        hashMap.put("f",30);
+
+        getTopTen(hashMap);
+        getTopKHeap(hashMap);
     }
 
 
